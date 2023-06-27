@@ -4,15 +4,13 @@ function solveEquation(a, b, c) {
 	let arr = [];
 	let discriminant = b ** 2 - 4 * a * c;
 
-	if (discriminant < 0) {
-		return arr;
-	} else if (discriminant === 0) {
+	 if (discriminant === 0) {
 		arr.push(-b / (2 * a));
-		return arr;
-	} else {
+	} else if (discriminant > 0) {
 		arr.push((-b + Math.sqrt(discriminant)) / (2 * a), (-b - Math.sqrt(discriminant)) / (2 * a));
-		return arr;
 	}
+	
+	return arr;
 }
 solveEquation(-5, 7, 3);
 
